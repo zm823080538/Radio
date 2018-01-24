@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D3AF8BF1FFCC6850045832C /* RAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8BE1FFCC6850045832C /* RAHomeViewController.m */; };
+		5D3AF8C21FFCC6920045832C /* RAProgrammeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8C11FFCC6920045832C /* RAProgrammeViewController.m */; };
+		5D3AF8C81FFCC6A90045832C /* RAServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8C71FFCC6A90045832C /* RAServiceViewController.m */; };
+		5D3AF8CB1FFCC6B30045832C /* RAMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8CA1FFCC6B30045832C /* RAMineViewController.m */; };
+		5D3AF8CC1FFCC7DA0045832C /* LBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA51DFA1FFCC3E8003FF60B /* LBTabBarController.m */; };
+		5D3AF8CD1FFCC7DD0045832C /* LBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA51DF81FFCC3E8003FF60B /* LBNavigationController.m */; };
+		5D3AF8CE1FFCC7E30045832C /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA51DF31FFCC3E8003FF60B /* UIImage+Image.m */; };
+		5D3AF8CF1FFCC7E60045832C /* UIView+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA51DF51FFCC3E8003FF60B /* UIView+LBExtension.m */; };
+		5D3AF8D01FFCC7EE0045832C /* LBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA51DFD1FFCC3E8003FF60B /* LBTabBar.m */; };
+		5D3AF8D21FFCCE160045832C /* CustomProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8B71FFCC5160045832C /* CustomProgressHUD.m */; };
+		5D3AF8D31FFCCF1A0045832C /* OfflineMapModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8B41FFCC5010045832C /* OfflineMapModule.m */; };
+		5D3AF8EE1FFE1B070045832C /* RAOfflineMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8ED1FFE1B070045832C /* RAOfflineMapViewController.m */; };
+		5D3AF8F31FFE21980045832C /* RALocPromptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AF8F21FFE21980045832C /* RALocPromptView.xib */; };
+		5D3AF8F91FFE24640045832C /* RALocPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8F81FFE24640045832C /* RALocPromptView.m */; };
+		5D3AF8FD1FFE25550045832C /* RAOfflineMapModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8FC1FFE25550045832C /* RAOfflineMapModule.m */; };
+		5D3AF9002001CD000045832C /* RADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF8FF2001CCFF0045832C /* RADetailViewController.m */; };
+		5D3AF9042001CF990045832C /* RARadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AF9022001CF990045832C /* RARadioViewController.m */; };
+		5D3AF9052001CF990045832C /* RARadioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AF9032001CF990045832C /* RARadioViewController.xib */; };
+		5DA51DDB1FFCC3AE003FF60B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA51DDA1FFCC3AE003FF60B /* AppDelegate.m */; };
+		5DA51DE31FFCC3AE003FF60B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA51DE21FFCC3AE003FF60B /* Assets.xcassets */; };
+		5DA51DE61FFCC3AE003FF60B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA51DE41FFCC3AE003FF60B /* LaunchScreen.storyboard */; };
+		5DA51DE91FFCC3AE003FF60B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA51DE81FFCC3AE003FF60B /* main.m */; };
+		5DC6AC602011F02800DA5D1D /* RALocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6AC5F2011F02800DA5D1D /* RALocationInfo.m */; };
+		5DDD6BAC200CC733007E5EDC /* RAIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DDD6BAB200CC733007E5EDC /* RAIndexView.xib */; };
+		5DDD6BB5200D8E05007E5EDC /* RANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD6BB4200D8E04007E5EDC /* RANavigationBar.m */; };
+		5DDD6BBA200D9ED5007E5EDC /* RAUIToolKits.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD6BB9200D9ED5007E5EDC /* RAUIToolKits.m */; };
+		5DDD6BBD200D9F70007E5EDC /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD6BBC200D9F70007E5EDC /* AFNetworkReachabilityManager.m */; };
+		5DDD6BBF200DA017007E5EDC /* RANetworkErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DDD6BBE200DA017007E5EDC /* RANetworkErrorView.xib */; };
+		5DDD6BC2200DA365007E5EDC /* RANetworkErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD6BC1200DA365007E5EDC /* RANetworkErrorView.m */; };
+		5DDD6BC5200DCEB3007E5EDC /* RABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD6BC4200DCEB3007E5EDC /* RABaseViewController.m */; };
+		5DDD6BCB200DF377007E5EDC /* UIWebView+RAOCJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD6BCA200DF377007E5EDC /* UIWebView+RAOCJS.m */; };
+		9C6C56680B0FFFDB753A275D /* libPods-RadioApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD7F249DFFDBA494A9F673F /* libPods-RadioApp.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0216C76CCD547B8D5FC8E3B4 /* Pods-RadioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadioApp/Pods-RadioApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0BD7F249DFFDBA494A9F673F /* libPods-RadioApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RadioApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2806AA58645714B31CCAC22A /* Pods-RadioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RadioApp/Pods-RadioApp.release.xcconfig"; sourceTree = "<group>"; };
+		5D3AF8B31FFCC5010045832C /* OfflineMapModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfflineMapModule.h; sourceTree = "<group>"; };
+		5D3AF8B41FFCC5010045832C /* OfflineMapModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfflineMapModule.m; sourceTree = "<group>"; };
+		5D3AF8B61FFCC5150045832C /* CustomProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomProgressHUD.h; sourceTree = "<group>"; };
+		5D3AF8B71FFCC5160045832C /* CustomProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomProgressHUD.m; sourceTree = "<group>"; };
+		5D3AF8BD1FFCC6850045832C /* RAHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAHomeViewController.h; sourceTree = "<group>"; };
+		5D3AF8BE1FFCC6850045832C /* RAHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAHomeViewController.m; sourceTree = "<group>"; };
+		5D3AF8C01FFCC6920045832C /* RAProgrammeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAProgrammeViewController.h; sourceTree = "<group>"; };
+		5D3AF8C11FFCC6920045832C /* RAProgrammeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAProgrammeViewController.m; sourceTree = "<group>"; };
+		5D3AF8C61FFCC6A90045832C /* RAServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAServiceViewController.h; sourceTree = "<group>"; };
+		5D3AF8C71FFCC6A90045832C /* RAServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAServiceViewController.m; sourceTree = "<group>"; };
+		5D3AF8C91FFCC6B30045832C /* RAMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAMineViewController.h; sourceTree = "<group>"; };
+		5D3AF8CA1FFCC6B30045832C /* RAMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAMineViewController.m; sourceTree = "<group>"; };
+		5D3AF8EC1FFE1B070045832C /* RAOfflineMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAOfflineMapViewController.h; sourceTree = "<group>"; };
+		5D3AF8ED1FFE1B070045832C /* RAOfflineMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAOfflineMapViewController.m; sourceTree = "<group>"; };
+		5D3AF8F21FFE21980045832C /* RALocPromptView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RALocPromptView.xib; sourceTree = "<group>"; };
+		5D3AF8F71FFE24640045832C /* RALocPromptView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RALocPromptView.h; sourceTree = "<group>"; };
+		5D3AF8F81FFE24640045832C /* RALocPromptView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RALocPromptView.m; sourceTree = "<group>"; };
+		5D3AF8FB1FFE25550045832C /* RAOfflineMapModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAOfflineMapModule.h; sourceTree = "<group>"; };
+		5D3AF8FC1FFE25550045832C /* RAOfflineMapModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAOfflineMapModule.m; sourceTree = "<group>"; };
+		5D3AF8FE2001CCFF0045832C /* RADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RADetailViewController.h; sourceTree = "<group>"; };
+		5D3AF8FF2001CCFF0045832C /* RADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RADetailViewController.m; sourceTree = "<group>"; };
+		5D3AF9012001CF990045832C /* RARadioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RARadioViewController.h; sourceTree = "<group>"; };
+		5D3AF9022001CF990045832C /* RARadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RARadioViewController.m; sourceTree = "<group>"; };
+		5D3AF9032001CF990045832C /* RARadioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RARadioViewController.xib; sourceTree = "<group>"; };
+		5DA51DD61FFCC3AE003FF60B /* RadioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA51DD91FFCC3AE003FF60B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DA51DDA1FFCC3AE003FF60B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DA51DE21FFCC3AE003FF60B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DA51DE51FFCC3AE003FF60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DA51DE71FFCC3AE003FF60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DA51DE81FFCC3AE003FF60B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DA51DF21FFCC3E8003FF60B /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		5DA51DF31FFCC3E8003FF60B /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		5DA51DF41FFCC3E8003FF60B /* UIView+LBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LBExtension.h"; sourceTree = "<group>"; };
+		5DA51DF51FFCC3E8003FF60B /* UIView+LBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LBExtension.m"; sourceTree = "<group>"; };
+		5DA51DF71FFCC3E8003FF60B /* LBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBNavigationController.h; sourceTree = "<group>"; };
+		5DA51DF81FFCC3E8003FF60B /* LBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBNavigationController.m; sourceTree = "<group>"; };
+		5DA51DF91FFCC3E8003FF60B /* LBTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBTabBarController.h; sourceTree = "<group>"; };
+		5DA51DFA1FFCC3E8003FF60B /* LBTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBTabBarController.m; sourceTree = "<group>"; };
+		5DA51DFC1FFCC3E8003FF60B /* LBTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBTabBar.h; sourceTree = "<group>"; };
+		5DA51DFD1FFCC3E8003FF60B /* LBTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBTabBar.m; sourceTree = "<group>"; };
+		5DC6AC5E2011F02800DA5D1D /* RALocationInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RALocationInfo.h; sourceTree = "<group>"; };
+		5DC6AC5F2011F02800DA5D1D /* RALocationInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RALocationInfo.m; sourceTree = "<group>"; };
+		5DDD6BAB200CC733007E5EDC /* RAIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RAIndexView.xib; sourceTree = "<group>"; };
+		5DDD6BB3200D8E04007E5EDC /* RANavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RANavigationBar.h; sourceTree = "<group>"; };
+		5DDD6BB4200D8E04007E5EDC /* RANavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RANavigationBar.m; sourceTree = "<group>"; };
+		5DDD6BB7200D9252007E5EDC /* MGUIDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGUIDefine.h; sourceTree = "<group>"; };
+		5DDD6BB8200D9ED5007E5EDC /* RAUIToolKits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAUIToolKits.h; sourceTree = "<group>"; };
+		5DDD6BB9200D9ED5007E5EDC /* RAUIToolKits.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAUIToolKits.m; sourceTree = "<group>"; };
+		5DDD6BBB200D9F70007E5EDC /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		5DDD6BBC200D9F70007E5EDC /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		5DDD6BBE200DA017007E5EDC /* RANetworkErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RANetworkErrorView.xib; sourceTree = "<group>"; };
+		5DDD6BC0200DA365007E5EDC /* RANetworkErrorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RANetworkErrorView.h; sourceTree = "<group>"; };
+		5DDD6BC1200DA365007E5EDC /* RANetworkErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RANetworkErrorView.m; sourceTree = "<group>"; };
+		5DDD6BC3200DCEB3007E5EDC /* RABaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RABaseViewController.h; sourceTree = "<group>"; };
+		5DDD6BC4200DCEB3007E5EDC /* RABaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RABaseViewController.m; sourceTree = "<group>"; };
+		5DDD6BC9200DF377007E5EDC /* UIWebView+RAOCJS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+RAOCJS.h"; sourceTree = "<group>"; };
+		5DDD6BCA200DF377007E5EDC /* UIWebView+RAOCJS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+RAOCJS.m"; sourceTree = "<group>"; };
+		5DF775BE2004662A001045B8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5DF775C32004670F001045B8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5DF775C62004679A001045B8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DA51DD31FFCC3AE003FF60B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6C56680B0FFFDB753A275D /* libPods-RadioApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		408DC8776ADD671B640A77F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0216C76CCD547B8D5FC8E3B4 /* Pods-RadioApp.debug.xcconfig */,
+				2806AA58645714B31CCAC22A /* Pods-RadioApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5D3AF8B21FFCC4DF0045832C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5DDD6BBB200D9F70007E5EDC /* AFNetworkReachabilityManager.h */,
+				5DDD6BBC200D9F70007E5EDC /* AFNetworkReachabilityManager.m */,
+				5D3AF8B31FFCC5010045832C /* OfflineMapModule.h */,
+				5D3AF8B41FFCC5010045832C /* OfflineMapModule.m */,
+				5DDD6BC9200DF377007E5EDC /* UIWebView+RAOCJS.h */,
+				5DDD6BCA200DF377007E5EDC /* UIWebView+RAOCJS.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5D3AF8B51FFCC5060045832C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AF8B61FFCC5150045832C /* CustomProgressHUD.h */,
+				5D3AF8B71FFCC5160045832C /* CustomProgressHUD.m */,
+				5D3AF8F21FFE21980045832C /* RALocPromptView.xib */,
+				5D3AF8F71FFE24640045832C /* RALocPromptView.h */,
+				5D3AF8F81FFE24640045832C /* RALocPromptView.m */,
+				5DDD6BB3200D8E04007E5EDC /* RANavigationBar.h */,
+				5DDD6BB4200D8E04007E5EDC /* RANavigationBar.m */,
+				5DDD6BB8200D9ED5007E5EDC /* RAUIToolKits.h */,
+				5DDD6BB9200D9ED5007E5EDC /* RAUIToolKits.m */,
+				5DDD6BBE200DA017007E5EDC /* RANetworkErrorView.xib */,
+				5DDD6BC0200DA365007E5EDC /* RANetworkErrorView.h */,
+				5DDD6BC1200DA365007E5EDC /* RANetworkErrorView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D3AF8B81FFCC6210045832C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AF8FA1FFE25350045832C /* Modules */,
+				5D3AF8BD1FFCC6850045832C /* RAHomeViewController.h */,
+				5D3AF8BE1FFCC6850045832C /* RAHomeViewController.m */,
+				5D3AF8EC1FFE1B070045832C /* RAOfflineMapViewController.h */,
+				5D3AF8ED1FFE1B070045832C /* RAOfflineMapViewController.m */,
+				5D3AF8FE2001CCFF0045832C /* RADetailViewController.h */,
+				5D3AF8FF2001CCFF0045832C /* RADetailViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5D3AF8B91FFCC62B0045832C /* Programme */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AF8C01FFCC6920045832C /* RAProgrammeViewController.h */,
+				5D3AF8C11FFCC6920045832C /* RAProgrammeViewController.m */,
+			);
+			path = Programme;
+			sourceTree = "<group>";
+		};
+		5D3AF8BA1FFCC64D0045832C /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AF9012001CF990045832C /* RARadioViewController.h */,
+				5D3AF9022001CF990045832C /* RARadioViewController.m */,
+				5D3AF9032001CF990045832C /* RARadioViewController.xib */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		5D3AF8BB1FFCC6530045832C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5DC6AC5D2011F00A00DA5D1D /* Model */,
+				5D3AF8C61FFCC6A90045832C /* RAServiceViewController.h */,
+				5D3AF8C71FFCC6A90045832C /* RAServiceViewController.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5D3AF8BC1FFCC6590045832C /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AF8C91FFCC6B30045832C /* RAMineViewController.h */,
+				5D3AF8CA1FFCC6B30045832C /* RAMineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		5D3AF8FA1FFE25350045832C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AF8FB1FFE25550045832C /* RAOfflineMapModule.h */,
+				5D3AF8FC1FFE25550045832C /* RAOfflineMapModule.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5DA51DCD1FFCC3AE003FF60B = {
+			isa = PBXGroup;
+			children = (
+				5DA51DD81FFCC3AE003FF60B /* RadioApp */,
+				5DA51DD71FFCC3AE003FF60B /* Products */,
+				408DC8776ADD671B640A77F7 /* Pods */,
+				921FF78182234D9A3217A8CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DA51DD71FFCC3AE003FF60B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DA51DD61FFCC3AE003FF60B /* RadioApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DA51DD81FFCC3AE003FF60B /* RadioApp */ = {
+			isa = PBXGroup;
+			children = (
+				5DA51DD91FFCC3AE003FF60B /* AppDelegate.h */,
+				5DA51DDA1FFCC3AE003FF60B /* AppDelegate.m */,
+				5DA51DE21FFCC3AE003FF60B /* Assets.xcassets */,
+				5DA51DEF1FFCC3D7003FF60B /* classes */,
+				5DA51DE71FFCC3AE003FF60B /* Info.plist */,
+				5DA51DE41FFCC3AE003FF60B /* LaunchScreen.storyboard */,
+				5DA51DE81FFCC3AE003FF60B /* main.m */,
+			);
+			path = RadioApp;
+			sourceTree = "<group>";
+		};
+		5DA51DEF1FFCC3D7003FF60B /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				5DDD6BB6200D9244007E5EDC /* Define */,
+				5D3AF8BC1FFCC6590045832C /* Mine */,
+				5D3AF8BB1FFCC6530045832C /* Service */,
+				5D3AF8BA1FFCC64D0045832C /* Radio */,
+				5D3AF8B91FFCC62B0045832C /* Programme */,
+				5D3AF8B81FFCC6210045832C /* Home */,
+				5D3AF8B51FFCC5060045832C /* Views */,
+				5D3AF8B21FFCC4DF0045832C /* Modules */,
+				5DA51DF01FFCC3E8003FF60B /* Main */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		5DA51DF01FFCC3E8003FF60B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5DA51DF11FFCC3E8003FF60B /* Category */,
+				5DA51DF61FFCC3E8003FF60B /* Controller */,
+				5DA51DFB1FFCC3E8003FF60B /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5DA51DF11FFCC3E8003FF60B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5DA51DF21FFCC3E8003FF60B /* UIImage+Image.h */,
+				5DA51DF31FFCC3E8003FF60B /* UIImage+Image.m */,
+				5DA51DF41FFCC3E8003FF60B /* UIView+LBExtension.h */,
+				5DA51DF51FFCC3E8003FF60B /* UIView+LBExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5DA51DF61FFCC3E8003FF60B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DA51DF71FFCC3E8003FF60B /* LBNavigationController.h */,
+				5DA51DF81FFCC3E8003FF60B /* LBNavigationController.m */,
+				5DA51DF91FFCC3E8003FF60B /* LBTabBarController.h */,
+				5DA51DFA1FFCC3E8003FF60B /* LBTabBarController.m */,
+				5DDD6BC3200DCEB3007E5EDC /* RABaseViewController.h */,
+				5DDD6BC4200DCEB3007E5EDC /* RABaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DA51DFB1FFCC3E8003FF60B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DA51DFC1FFCC3E8003FF60B /* LBTabBar.h */,
+				5DA51DFD1FFCC3E8003FF60B /* LBTabBar.m */,
+				5DDD6BAB200CC733007E5EDC /* RAIndexView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DC6AC5D2011F00A00DA5D1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DC6AC5E2011F02800DA5D1D /* RALocationInfo.h */,
+				5DC6AC5F2011F02800DA5D1D /* RALocationInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DDD6BB6200D9244007E5EDC /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				5DDD6BB7200D9252007E5EDC /* MGUIDefine.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		921FF78182234D9A3217A8CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DF775C62004679A001045B8 /* CoreGraphics.framework */,
+				5DF775C32004670F001045B8 /* CFNetwork.framework */,
+				5DF775BE2004662A001045B8 /* libz.tbd */,
+				0BD7F249DFFDBA494A9F673F /* libPods-RadioApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DA51DD51FFCC3AE003FF60B /* RadioApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DA51DEC1FFCC3AE003FF60B /* Build configuration list for PBXNativeTarget "RadioApp" */;
+			buildPhases = (
+				FEB03CD9FA536B2D5C183DB8 /* [CP] Check Pods Manifest.lock */,
+				5DA51DD21FFCC3AE003FF60B /* Sources */,
+				5DA51DD31FFCC3AE003FF60B /* Frameworks */,
+				5DA51DD41FFCC3AE003FF60B /* Resources */,
+				DEFACFD552C91C31291D5D43 /* [CP] Embed Pods Frameworks */,
+				EA6F6870E280E118CA25BA66 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadioApp;
+			productName = RadioApp;
+			productReference = 5DA51DD61FFCC3AE003FF60B /* RadioApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DA51DCE1FFCC3AE003FF60B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RA;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = zhaoming;
+				TargetAttributes = {
+					5DA51DD51FFCC3AE003FF60B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5DA51DD11FFCC3AE003FF60B /* Build configuration list for PBXProject "RadioApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DA51DCD1FFCC3AE003FF60B;
+			productRefGroup = 5DA51DD71FFCC3AE003FF60B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DA51DD51FFCC3AE003FF60B /* RadioApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DA51DD41FFCC3AE003FF60B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D3AF8F31FFE21980045832C /* RALocPromptView.xib in Resources */,
+				5DA51DE61FFCC3AE003FF60B /* LaunchScreen.storyboard in Resources */,
+				5DA51DE31FFCC3AE003FF60B /* Assets.xcassets in Resources */,
+				5D3AF9052001CF990045832C /* RARadioViewController.xib in Resources */,
+				5DDD6BAC200CC733007E5EDC /* RAIndexView.xib in Resources */,
+				5DDD6BBF200DA017007E5EDC /* RANetworkErrorView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEFACFD552C91C31291D5D43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadioApp/Pods-RadioApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA6F6870E280E118CA25BA66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RadioApp/Pods-RadioApp-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadioApp/Pods-RadioApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB03CD9FA536B2D5C183DB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadioApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DA51DD21FFCC3AE003FF60B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D3AF8CF1FFCC7E60045832C /* UIView+LBExtension.m in Sources */,
+				5D3AF8BF1FFCC6850045832C /* RAHomeViewController.m in Sources */,
+				5D3AF8CE1FFCC7E30045832C /* UIImage+Image.m in Sources */,
+				5D3AF8CD1FFCC7DD0045832C /* LBNavigationController.m in Sources */,
+				5DDD6BB5200D8E05007E5EDC /* RANavigationBar.m in Sources */,
+				5D3AF8C81FFCC6A90045832C /* RAServiceViewController.m in Sources */,
+				5DDD6BCB200DF377007E5EDC /* UIWebView+RAOCJS.m in Sources */,
+				5D3AF8D31FFCCF1A0045832C /* OfflineMapModule.m in Sources */,
+				5D3AF8F91FFE24640045832C /* RALocPromptView.m in Sources */,
+				5D3AF9042001CF990045832C /* RARadioViewController.m in Sources */,
+				5DA51DE91FFCC3AE003FF60B /* main.m in Sources */,
+				5DDD6BBD200D9F70007E5EDC /* AFNetworkReachabilityManager.m in Sources */,
+				5DC6AC602011F02800DA5D1D /* RALocationInfo.m in Sources */,
+				5D3AF8D01FFCC7EE0045832C /* LBTabBar.m in Sources */,
+				5DDD6BBA200D9ED5007E5EDC /* RAUIToolKits.m in Sources */,
+				5DDD6BC2200DA365007E5EDC /* RANetworkErrorView.m in Sources */,
+				5DDD6BC5200DCEB3007E5EDC /* RABaseViewController.m in Sources */,
+				5D3AF8EE1FFE1B070045832C /* RAOfflineMapViewController.m in Sources */,
+				5D3AF8CB1FFCC6B30045832C /* RAMineViewController.m in Sources */,
+				5D3AF8CC1FFCC7DA0045832C /* LBTabBarController.m in Sources */,
+				5D3AF8C21FFCC6920045832C /* RAProgrammeViewController.m in Sources */,
+				5D3AF9002001CD000045832C /* RADetailViewController.m in Sources */,
+				5D3AF8D21FFCCE160045832C /* CustomProgressHUD.m in Sources */,
+				5DA51DDB1FFCC3AE003FF60B /* AppDelegate.m in Sources */,
+				5D3AF8FD1FFE25550045832C /* RAOfflineMapModule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5DA51DE41FFCC3AE003FF60B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DA51DE51FFCC3AE003FF60B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DA51DEA1FFCC3AE003FF60B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5DA51DEB1FFCC3AE003FF60B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DA51DED1FFCC3AE003FF60B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0216C76CCD547B8D5FC8E3B4 /* Pods-RadioApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZ89FJ7599;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RadioApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"ReactiveCocoa\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"sqlite3.0\"",
+					"-l\"ssl\"",
+					"-framework",
+					"\"BaiduMapAPI_Base\"",
+					"-framework",
+					"\"BaiduMapAPI_Cloud\"",
+					"-framework",
+					"\"BaiduMapAPI_Location\"",
+					"-framework",
+					"\"BaiduMapAPI_Map\"",
+					"-framework",
+					"\"BaiduMapAPI_Radar\"",
+					"-framework",
+					"\"BaiduMapAPI_Search\"",
+					"-framework",
+					"\"BaiduMapAPI_Utils\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunny.radioApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DA51DEE1FFCC3AE003FF60B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2806AA58645714B31CCAC22A /* Pods-RadioApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZ89FJ7599;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RadioApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"ReactiveCocoa\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"sqlite3.0\"",
+					"-l\"ssl\"",
+					"-framework",
+					"\"BaiduMapAPI_Base\"",
+					"-framework",
+					"\"BaiduMapAPI_Cloud\"",
+					"-framework",
+					"\"BaiduMapAPI_Location\"",
+					"-framework",
+					"\"BaiduMapAPI_Map\"",
+					"-framework",
+					"\"BaiduMapAPI_Radar\"",
+					"-framework",
+					"\"BaiduMapAPI_Search\"",
+					"-framework",
+					"\"BaiduMapAPI_Utils\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunny.radioApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DA51DD11FFCC3AE003FF60B /* Build configuration list for PBXProject "RadioApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DA51DEA1FFCC3AE003FF60B /* Debug */,
+				5DA51DEB1FFCC3AE003FF60B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DA51DEC1FFCC3AE003FF60B /* Build configuration list for PBXNativeTarget "RadioApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DA51DED1FFCC3AE003FF60B /* Debug */,
+				5DA51DEE1FFCC3AE003FF60B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DA51DCE1FFCC3AE003FF60B /* Project object */;
+}
