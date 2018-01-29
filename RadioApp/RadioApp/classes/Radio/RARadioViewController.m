@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addRANavigationBarWithTitle:@"在线直播"];
+    self.view.navigationBar.titleLabel.textColor = [UIColor whiteColor];
+    self.view.navigationBar.backgroundColor = [UIColor clearColor];
     AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:@"http://rme.stream.dicast.fr:8000/rme-192.mp3"]];
     _player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
     @www
