@@ -10,12 +10,12 @@
 #import <YYModel.h>
 
 #import <JavaScriptCore/JavaScriptCore.h>
-
+#import "CustomURLCache.h"
 #import "UIWebView+RAOCJS.h"
 #import "CustomProgressHUD.h"
 #import "RADetailViewController.h"
 #import "RAOfflineMapViewController.h"
-
+#import "MGUIDefine.h"
 #import "RALocationInfo.h"
 
 int const parisCityID = 36590;
@@ -43,16 +43,21 @@ int const parisCityID = 36590;
     }
 }
 
+- (instancetype)init {
+    if (self = [super init]) {
+        CustomURLCache *urlCache = [[CustomURLCache alloc] initWithMemoryCapacity:20 * 1024 * 1024
+                                                                     diskCapacity:200 * 1024 * 1024
+                                                                         diskPath:nil
+                                                                        cacheTime:0];
+        [CustomURLCache setSharedURLCache:urlCache];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *urlString = @"http://gapp.msii.top/index.php?m=content&c=index&a=lists&catid=11&s=m";
-    self.url = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-    [self.webView loadRequest:request];
-    
     _offlineMap = [[BMKOfflineMap alloc] init];
     _offlineMap.delegate = self;
-//    [_offlineMap start:parisCityID];
     _arraylocalDownLoadMapInfo = [NSMutableArray arrayWithArray:[_offlineMap getAllUpdateInfo]];
     BMKOLUpdateElement* item = _arraylocalDownLoadMapInfo.firstObject;
     if (item.update) {
@@ -62,6 +67,13 @@ int const parisCityID = 36590;
         [_offlineMap start:parisCityID];
     }
     
+}
+
+- (void)changeBaseUrl {
+    NSString *urlString = [NSString stringWithFormat:@"%@index.php?m=content&c=index&a=lists&catid=11&s=m",BaseUrl];
+    self.url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    [self.webView loadRequest:request];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -81,6 +93,7 @@ int const parisCityID = 36590;
     JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     context[@"lbs"] = ^() {
         NSArray *args = [JSContext currentArguments];
+        NSLog(@"--%@",args);
         NSMutableArray *locationInfos = @[].mutableCopy;
         [[args[0] toArray] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             RALocationInfo *locationInfo = [RALocationInfo yy_modelWithJSON:obj];
@@ -89,6 +102,7 @@ int const parisCityID = 36590;
        
             dispatch_async(dispatch_get_main_queue(), ^{
                 RAOfflineMapViewController *offlineMapVC = [RAOfflineMapViewController new];
+                offlineMapVC.title = [args[1] toString];
                 offlineMapVC.offlineServiceOfMapview = _offlineMap;
                 offlineMapVC.cityId = parisCityID;
                 offlineMapVC.locations = locationInfos;
@@ -96,9 +110,6 @@ int const parisCityID = 36590;
             });
     };
 }
-    
-
-
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 
@@ -114,6 +125,14 @@ int const parisCityID = 36590;
         return NO;
     }    
     return YES;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
     
+    CustomURLCache *urlCache = (CustomURLCache *)[NSURLCache sharedURLCache];
+    [urlCache removeAllCachedResponses];
 }
 @end

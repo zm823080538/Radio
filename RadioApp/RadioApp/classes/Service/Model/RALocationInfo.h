@@ -15,4 +15,6 @@
 @property (nonatomic, copy) NSString *jiaotong;
 @property (nonatomic, copy) NSString *keywords;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *price;
+@property (nonatomic, copy) NSString *fee;
 @end

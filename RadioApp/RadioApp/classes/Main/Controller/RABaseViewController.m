@@ -10,6 +10,7 @@
 #import "CustomProgressHUD.h"
 #import "RAUIToolKits.h"
 #import "MGUIDefine.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 
 @interface RABaseViewController () <UIWebViewDelegate>{
     CustomProgressHUD *_hud;
@@ -35,7 +36,13 @@
             _webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
     }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeBaseUrl) name:@"changeBaseUrl" object:nil];
+    
     _hud = [CustomProgressHUD customShowHUDAddedTo:self.webView animated:YES];
+}
+
+- (void)changeBaseUrl {
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

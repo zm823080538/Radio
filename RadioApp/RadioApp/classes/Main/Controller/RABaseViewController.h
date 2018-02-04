@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-@interface RABaseViewController : UIViewController
+
+@protocol RefreshProtocol <NSObject>
+- (void)changeBaseUrl;
+@end
+
+@interface RABaseViewController : UIViewController <RefreshProtocol>
 @property (nonatomic) UIWebView *webView;
 @property (nonatomic, strong) NSURL *url;
 - (void)finishLoad;

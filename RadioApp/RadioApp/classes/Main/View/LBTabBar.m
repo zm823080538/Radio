@@ -103,7 +103,7 @@
 //点击了发布按钮
 - (void)plusBtnDidClick
 {
-    self.plusBtn.selected = !self.plusBtn.selected;
+//    self.plusBtn.selected = !self.plusBtn.selected;
     //如果tabbar的代理实现了对应的代理方法，那么就调用代理的该方法
     if ([self.delegate respondsToSelector:@selector(tabBarPlusBtnClick:)]) {
         [self.myDelegate tabBarPlusBtnClick:self];

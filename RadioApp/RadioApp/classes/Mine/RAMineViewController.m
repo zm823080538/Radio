@@ -11,7 +11,10 @@
 #import "CustomProgressHUD.h"
 #import "RADetailViewController.h"
 #import "LBNavigationController.h"
-#define LOGIN_URL @"http://gapp.msii.top/index.php?m=member&c=index&a=login"
+#import "LBTabBarController.h"
+#import "MGUIDefine.h"
+#define LOGIN_URL [NSString stringWithFormat:@"%@index.php?m=member&c=index&a=login",BaseUrl]
+#define LOGOUT_URL [NSString stringWithFormat:@"%@index.php?m=member&c=index&a=logout&s=m",BaseUrl]
 
 @interface RAMineViewController () <UIWebViewDelegate>{
     BOOL _launchFirst;
@@ -25,10 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _launchFirst = YES;
-    self.url = [NSURL URLWithString:@"http://gapp.msii.top/index.php?m=member&s=m"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshWeb) name:@"refreshWeb" object:nil];
     
     NSLog(@"");
+}
+
+- (void)changeBaseUrl {
+    NSString *urlString = [NSString stringWithFormat:@"%@index.php?m=member&s=m",BaseUrl];
+    self.url = [NSURL URLWithString:urlString];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -40,7 +47,6 @@
 }
 
 - (void)refreshWeb {
-    
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     [self.webView loadRequest:request];
 }
@@ -52,7 +58,9 @@
         [self refreshWeb];
         _launchFirst = NO;
     }
-    
+        [self refreshWeb];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
 }
 
 
@@ -60,7 +68,6 @@
 {
     //判断是否是单击
     NSURL *url = [request URL];
-
     if (navigationType == UIWebViewNavigationTypeLinkClicked)
     {
         if ([url.absoluteString hasPrefix:LOGIN_URL]) {
@@ -74,6 +81,9 @@
     } else if ([url.absoluteString hasPrefix:LOGIN_URL]) {
         [self presntToLoginVCWithUrl:url];
         return NO;
+    } else if ([url.absoluteString hasPrefix:LOGOUT_URL]) {
+        LBTabBarController *tabbar = (LBTabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+        tabbar.selectedIndex = 0;
     }
     return YES;
 }

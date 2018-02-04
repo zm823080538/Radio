@@ -13,7 +13,7 @@
 @interface RAOfflineMapModule : NSObject
 - (void)showLocPromptView;
 - (void)dismissLocPromptView;
-
+- (void)createLocpromptView;
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) RALocationInfo *locationInfo;
 @end

@@ -11,6 +11,7 @@
 #import "RADetailViewController.h"
 #import "UIWebView+RAOCJS.h"
 #import "LBTabBarController.h"
+#import "MGUIDefine.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 @interface RAProgrammeViewController () <UIWebViewDelegate>{
     UIWebView *_webView;
@@ -21,14 +22,12 @@
 
 @implementation RAProgrammeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    NSString *urlString = @"http://gapp.msii.top/index.php?m=content&c=index&a=lists&catid=23&s=m";
+- (void)changeBaseUrl {
+    NSString *urlString = [NSString stringWithFormat:@"%@index.php?m=content&c=index&a=lists&catid=23&s=m",BaseUrl];
     self.url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     //创建NSURLRequest
     [self.webView loadRequest:request];//加载
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {

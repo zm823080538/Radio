@@ -8,7 +8,7 @@
 
 #import "LBTabBarController.h"
 #import "LBNavigationController.h"
-
+#import "MGUIDefine.h"
 #import "RAHomeViewController.h"
 #import "RAProgrammeViewController.h"
 #import "RARadioViewController.h"
@@ -67,6 +67,7 @@
     LBTabBar *tabbar = (LBTabBar *)self.tabBar;
     BOOL select = [noti.object boolValue];
     tabbar.plusBtn.selected = select;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
 }
 
@@ -84,7 +85,6 @@
 
 - (void)setUpAllChildVc
 {
-
 
     RAHomeViewController *HomeVC = [[RAHomeViewController alloc] init];
     [self setUpOneChildVcWithVc:HomeVC Image:@"tab1" selectedImage:@"tab1_select" title:@"首页"];
@@ -150,10 +150,16 @@
 
 - (IBAction)selectChina:(UIButton *)sender {
     sender.superview.hidden = YES;
+    selectCountryStatus = SelectCountryStatusChina;
+//    BaseUrl = @"http://gapp.msii.top/";
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeBaseUrl" object:nil];
     [sender.superview.superview removeFromSuperview];
 }
 - (IBAction)selectFranch:(UIButton *)sender {
     sender.superview.hidden = YES;
+//    BaseUrl = @"http://frgapp.msii.top/";
+    selectCountryStatus = SelectCountryStatusFranch;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeBaseUrl" object:nil];
     [sender.superview.superview removeFromSuperview];
 }
 

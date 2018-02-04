@@ -9,6 +9,12 @@
 #ifndef MGUIDefine_h
 #define MGUIDefine_h
 
+typedef NS_ENUM(NSUInteger, SelectCountryStatus) {
+    SelectCountryStatusChina = 0,
+    SelectCountryStatusFranch = 1
+};
+static SelectCountryStatus selectCountryStatus;
+#define BaseUrl (selectCountryStatus == SelectCountryStatusChina) ? @"http://gapp.msii.top/": @"http://frgapp.msii.top/"
 //屏幕尺寸
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)

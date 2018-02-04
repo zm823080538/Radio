@@ -36,6 +36,10 @@
 	<string>需要你的同意，才能拍照</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要你的同意，才能选取照片</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

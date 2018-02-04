@@ -10,6 +10,7 @@
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
 #import "RAOfflineMapModule.h"
 #import "RALocationInfo.h"
+#import "RACustomPinAnnotationView.h"
 
 @interface RAOfflineMapViewController () <BMKPoiSearchDelegate>{
 //    BMKPoiSearch* _poisearch;
@@ -43,6 +44,8 @@
     [_mapView viewWillAppear];
     _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
 //    _poisearch.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -71,16 +74,23 @@
     NSString *AnnotationViewID = @"xidanMark";
     
     // 检查是否有重用的缓存
-    BMKAnnotationView* annotationView = [view dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    RACustomPinAnnotationView* annotationView = (RACustomPinAnnotationView *)[view dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
     
     // 缓存没有命中，自己构造一个，一般首次添加annotation代码会运行到此处
     if (annotationView == nil) {
-        annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
-        ((BMKPinAnnotationView*)annotationView).pinColor = BMKPinAnnotationColorRed;
+        annotationView = [[RACustomPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
+        ((RACustomPinAnnotationView*)annotationView).pinColor = BMKPinAnnotationColorRed;
         // 设置重天上掉下的效果(annotation)
-        ((BMKPinAnnotationView*)annotationView).animatesDrop = NO;
+        ((RACustomPinAnnotationView*)annotationView).animatesDrop = NO;
     }
+    
     annotationView.image = [UIImage imageNamed:@"Artboard 13"];
+    NSUInteger index = [_mapView.annotations indexOfObject:annotation] + 65;
+    NSString *string = [NSString stringWithFormat:@"%c",index]; // A
+    if (index > 90) {
+        string = @"Z+";
+    }
+    annotationView.label.text = string;
     // 设置位置
     annotationView.annotation = annotation;
     annotationView.enabled = YES;
@@ -93,6 +103,7 @@
 - (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
 {
     NSLog(@"---%lf,---%lf",view.annotation.coordinate.longitude,view.annotation.coordinate.latitude);
+    [_offlineMapModule createLocpromptView];
     _offlineMapModule.coordinate = view.annotation.coordinate;
     [_offlineMapModule showLocPromptView];
 
@@ -113,6 +124,8 @@
 {
     NSLog(@"didAddAnnotationViews");
 }
+
+
 
 
 @end

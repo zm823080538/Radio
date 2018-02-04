@@ -20,7 +20,8 @@
 @end
 
 @implementation RAOfflineMapModule
-- (void)showLocPromptView {
+
+- (void)createLocpromptView {
     UIButton *bgButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bgButton.frame = [UIApplication sharedApplication].keyWindow.bounds;
     bgButton.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
@@ -33,7 +34,7 @@
         [bgButton removeFromSuperview];
     }];
     _promptView = [[NSBundle mainBundle] loadNibNamed:@"RALocPromptView" owner:nil options:nil].firstObject;
-    _promptView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, _promptView.height);
+    
     [[_promptView.pilotButton  rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         [self dismissLocPromptView];
         
@@ -55,8 +56,8 @@
         if (baiduMapCanOpen) {
             [alertController addAction:[UIAlertAction actionWithTitle:@"百度地图导航" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 NSString *urlString = [[NSString stringWithFormat:@"baidumap://map/direction?origin={{我的位置}}&destination=latlng:%f,%f|name=巴黎&mode=driving&coord_type=gcj02",self.coordinate.latitude,self.coordinate.longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//                NSString *urlString = [[NSString stringWithFormat:@"baidumap://map/direction?origin={{我的位置}}&destination=latlng:%f,%f|name=目的地&mode=driving&coord_type=gcj02",self.coordinate.latitude, self.coordinate.longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//                baiduMapDic[@"url"] = urlString;
+                //                NSString *urlString = [[NSString stringWithFormat:@"baidumap://map/direction?origin={{我的位置}}&destination=latlng:%f,%f|name=目的地&mode=driving&coord_type=gcj02",self.coordinate.latitude, self.coordinate.longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                //                baiduMapDic[@"url"] = urlString;
                 if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {
                     
                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
@@ -75,16 +76,20 @@
                     
                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
                 }
-//                gaodeMapDic[@"url"] = urlString;
-//                NSString *urlString = [[NSString stringWithFormat:@"comgooglemaps://?x-source=%@&x-success=%@&saddr=&daddr=%f,%f&directionsmode=driving",@"电台App",urlScheme,self.coordinate.latitude, coordinate.longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+                //                gaodeMapDic[@"url"] = urlString;
+                //                NSString *urlString = [[NSString stringWithFormat:@"comgooglemaps://?x-source=%@&x-success=%@&saddr=&daddr=%f,%f&directionsmode=driving",@"电台App",urlScheme,self.coordinate.latitude, coordinate.longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                //                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
             }]];
         }
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
     }];
     [[UIApplication sharedApplication].keyWindow addSubview:_promptView];
+}
+
+- (void)showLocPromptView {
+    
     [UIView animateWithDuration:0.3f animations:^{
-        _promptView.transform = CGAffineTransformTranslate(_promptView.transform, 0, -_promptView.height - 30);
+        _promptView.transform = CGAffineTransformTranslate(_promptView.transform, 0, -_promptView.height);
     }];
 }
 
@@ -93,6 +98,10 @@
     _promptView.titleLabel.text = locationInfo.title;
     _promptView.telephone.text = locationInfo.keywords;
     _promptView.trafficOneLabel.text = locationInfo.jiaotong;
+    _promptView.info_price_label.text = locationInfo.price;
+    _promptView.peopleLabel.text = locationInfo.fee;
+    _promptView.address.text = locationInfo.content;
+    _promptView.frame = CGRectMake(20, SCREEN_HEIGHT, SCREEN_WIDTH - 40, _promptView.height);
 }
 
 - (void)dismissLocPromptView {

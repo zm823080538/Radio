@@ -13,6 +13,7 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "RADetailViewController.h"
 #import "RAUIToolKits.h"
+#import "MGUIDefine.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 
 @interface RAHomeViewController () <WKScriptMessageHandler,WKNavigationDelegate,UIWebViewDelegate,BMKOfflineMapDelegate> {
@@ -34,14 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.url = [NSURL URLWithString:@"http://gapp.msii.top/index.php?s=m"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-    [self.webView loadRequest:request];
     [self.view addSubview:self.webView];
-    
-   
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -52,6 +46,19 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
+}
+
+- (void)changeBaseUrl {
+    NSLog(@"--%ld",selectCountryStatus);
+    NSString *urlString = [NSString stringWithFormat:@"%@index.php?s=m",BaseUrl];
+    self.url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    [self.webView loadRequest:request];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [super finishLoad];
+    NSLog(@"%lf",self.webView.scrollView.contentSize.height);
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType

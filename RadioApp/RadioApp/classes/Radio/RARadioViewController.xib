@@ -12,7 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RARadioViewController">
             <connections>
+                <outlet property="bgScrollView" destination="Ohb-Dl-WDZ" id="Uex-ZB-USx"/>
+                <outlet property="topView" destination="New-Xy-Ash" id="jZf-uW-cTa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="SOL-oQ-R3L" id="idf-zK-C2r"/>
+                <outlet property="webViewHeight" destination="zsS-hy-zSi" id="xh4-yC-LaE"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,25 +27,70 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KZ-BQ-iUJ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artboard 25" translatesAutoresizingMaskIntoConstraints="NO" id="rXo-V4-nIu">
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-Dl-WDZ">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06f-u6-bvF">
-                            <rect key="frame" x="154" y="175" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="播放"/>
-                            <state key="selected" title="暂停"/>
-                            <connections>
-                                <action selector="play:" destination="-1" eventType="touchUpInside" id="5cT-6s-jGI"/>
-                            </connections>
-                        </button>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-uC-aIs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="993"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="New-Xy-Ash">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="326"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-pP-Mra">
+                                                    <rect key="frame" x="76" y="104" width="222" height="222"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="222" id="7z5-yl-zGi"/>
+                                                        <constraint firstAttribute="height" constant="222" id="faV-fC-1Ud"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Artboard 33"/>
+                                                    <connections>
+                                                        <action selector="play:" destination="-1" eventType="touchUpInside" id="YcX-Kg-7Xc"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="hkM-pP-Mra" firstAttribute="centerX" secondItem="New-Xy-Ash" secondAttribute="centerX" id="Dv9-be-iaD"/>
+                                                <constraint firstAttribute="bottom" secondItem="hkM-pP-Mra" secondAttribute="bottom" id="IPJ-Dp-UZW"/>
+                                                <constraint firstAttribute="height" constant="326" id="SL6-xJ-Tcp"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="New-Xy-Ash" firstAttribute="leading" secondItem="g1i-uC-aIs" secondAttribute="leading" id="6Ob-j5-rsy"/>
+                                        <constraint firstItem="New-Xy-Ash" firstAttribute="top" secondItem="g1i-uC-aIs" secondAttribute="top" id="FD2-rh-5de"/>
+                                        <constraint firstAttribute="trailing" secondItem="New-Xy-Ash" secondAttribute="trailing" id="GDI-ng-1Lz"/>
+                                        <constraint firstAttribute="height" constant="993" id="rze-Ay-nA2"/>
+                                    </constraints>
+                                </view>
+                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOL-oQ-R3L">
+                                    <rect key="frame" x="0.0" y="326" width="375" height="667"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="667" id="zsS-hy-zSi"/>
+                                    </constraints>
+                                </webView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="g1i-uC-aIs" secondAttribute="bottom" id="1ee-VH-EU5"/>
+                                <constraint firstAttribute="trailing" secondItem="SOL-oQ-R3L" secondAttribute="trailing" id="I2v-rQ-966"/>
+                                <constraint firstItem="g1i-uC-aIs" firstAttribute="top" secondItem="Ohb-Dl-WDZ" secondAttribute="top" id="Lhc-dL-KY4"/>
+                                <constraint firstItem="SOL-oQ-R3L" firstAttribute="leading" secondItem="Ohb-Dl-WDZ" secondAttribute="leading" id="Pdz-DE-cDa"/>
+                                <constraint firstItem="SOL-oQ-R3L" firstAttribute="top" secondItem="New-Xy-Ash" secondAttribute="bottom" id="R4I-S3-utU"/>
+                                <constraint firstAttribute="trailing" secondItem="g1i-uC-aIs" secondAttribute="trailing" id="Znc-Rh-1dV"/>
+                                <constraint firstItem="g1i-uC-aIs" firstAttribute="centerX" secondItem="Ohb-Dl-WDZ" secondAttribute="centerX" id="dw8-JE-EBY"/>
+                                <constraint firstItem="g1i-uC-aIs" firstAttribute="leading" secondItem="Ohb-Dl-WDZ" secondAttribute="leading" id="sud-xX-vWN"/>
+                            </constraints>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="rXo-V4-nIu" secondAttribute="bottom" id="3PO-Pl-XIA"/>
-                        <constraint firstAttribute="trailing" secondItem="rXo-V4-nIu" secondAttribute="trailing" id="gDX-iW-83o"/>
-                        <constraint firstItem="rXo-V4-nIu" firstAttribute="leading" secondItem="7KZ-BQ-iUJ" secondAttribute="leading" id="h06-sT-YcA"/>
-                        <constraint firstItem="rXo-V4-nIu" firstAttribute="top" secondItem="7KZ-BQ-iUJ" secondAttribute="top" id="jPC-bK-lAc"/>
+                        <constraint firstAttribute="trailing" secondItem="Ohb-Dl-WDZ" secondAttribute="trailing" id="C0y-pR-wsU"/>
+                        <constraint firstItem="Ohb-Dl-WDZ" firstAttribute="leading" secondItem="7KZ-BQ-iUJ" secondAttribute="leading" id="LJg-cZ-yy1"/>
+                        <constraint firstAttribute="bottom" secondItem="Ohb-Dl-WDZ" secondAttribute="bottom" id="k7K-xj-Ei2"/>
+                        <constraint firstItem="Ohb-Dl-WDZ" firstAttribute="top" secondItem="7KZ-BQ-iUJ" secondAttribute="top" id="t9h-aw-zrd"/>
                     </constraints>
                 </view>
             </subviews>
@@ -57,6 +106,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Artboard 25" width="375" height="667"/>
+        <image name="Artboard 33" width="244" height="244"/>
     </resources>
 </document>

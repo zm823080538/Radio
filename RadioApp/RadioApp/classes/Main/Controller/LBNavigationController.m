@@ -24,12 +24,12 @@
     UIBarButtonItem *item=[UIBarButtonItem appearanceWhenContainedIn:self, nil ];
     NSMutableDictionary *dic=[NSMutableDictionary dictionary];
     dic[NSFontAttributeName]=[UIFont systemFontOfSize:15];
-    dic[NSForegroundColorAttributeName]=[UIColor blackColor];
+    dic[NSForegroundColorAttributeName]=[UIColor whiteColor];
     [item setTitleTextAttributes:dic forState:UIControlStateNormal];
 
     UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
    
-    [bar setBackgroundImage:[UIImage imageWithColor:NavBarColor] forBarMetrics:UIBarMetricsDefault];
+    [bar setBackgroundImage:[UIImage imageNamed:@"nav_bg1"] forBarMetrics:UIBarMetricsDefault];
     NSMutableDictionary *dicBar=[NSMutableDictionary dictionary];
 
     dicBar[NSFontAttributeName]=[UIFont systemFontOfSize:15];

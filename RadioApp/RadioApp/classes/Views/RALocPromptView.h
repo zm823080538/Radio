@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *address;
 @property (weak, nonatomic) IBOutlet UILabel *telephone;
 @property (weak, nonatomic) IBOutlet UILabel *trafficOneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *info_price_label;
+@property (weak, nonatomic) IBOutlet UILabel *peopleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *pilotButton;
 @end
